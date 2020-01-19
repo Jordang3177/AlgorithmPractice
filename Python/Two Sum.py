@@ -1,8 +1,9 @@
 def twoSum(self, nums, target):
+    index = 0
     seen = {}
-    for i, v in enumerate(nums):
-        remaining = target - v
+    for num1 in nums:
+        remaining = target - num1
         if remaining in seen:
-            return [seen[remaining], i]
-        seen[v] = i
-    return []
+            return [seen[remaining], index]
+        seen[num1] = index
+        index += 1
