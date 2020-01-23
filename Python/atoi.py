@@ -8,12 +8,18 @@ def myAtoi(str):
     numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     signs = ['+', '-']
     onesign = True
-    numberFirst = True
+    numberFirst = False
     for i in range(0, len(str)):
         if str[i] in numeric:
+            if i == 0:
+                answer += str[i]
+                numberFirst = True
+                continue
             answer += str[i]
             continue
         if str[i] in signs and onesign:
+            if i != 0 and numberFirst:
+                break
             answer += str[i]
             onesign = False
         else:
