@@ -12,7 +12,6 @@ class Solution:
                 else:
                     print('work in progress')
 
-
     def testLongestCommonPrefix(self):
         assert self.longestCommonPrefix(['flower', 'flow', 'flight']) == 'fl'
         assert self.longestCommonPrefix(['dog', 'racecar', 'car']) == ''
@@ -21,7 +20,8 @@ class Solution:
         assert self.longestCommonPrefix(['lol', 'lol', 'lol', 'lol', 'ololol', 'n']) == ''
         assert self.longestCommonPrefix(['okthen', 'lol', 'wow', 'only']) == 'o'
         assert self.longestCommonPrefix([]) == ''
-        
+        assert self.longestCommonPrefix(['one']) == 'one'
+
 
 if __name__ == '__main__':
     S = Solution()
