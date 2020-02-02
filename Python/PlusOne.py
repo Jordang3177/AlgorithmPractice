@@ -1,6 +1,11 @@
 class Solution:
     def plusOne(self, digits):
-        return [1]
+        if digits[len(digits) - 1] != 9:
+            digits[len(digits) - 1] += 1
+            return digits
+        else:
+            i = len(digits - 1)
+            while digits
 
     def testPlusOne(self):
         assert self.plusOne([1,2,3]) == [1,2,4]
