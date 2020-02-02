@@ -4,8 +4,19 @@ class Solution:
             digits[len(digits) - 1] += 1
             return digits
         else:
-            i = len(digits - 1)
-            while digits
+            i = len(digits) - 1
+            length = len(digits)
+            while digits[i] == 9:
+                if i == 0:
+                    answer = [1]
+                    for i in range(0, length):
+                        answer = answer + [0]
+                    return answer
+                else:
+                    digits[i] = 0
+                    i = i - 1
+            digits[i] += 1
+            return digits
 
     def testPlusOne(self):
         assert self.plusOne([1,2,3]) == [1,2,4]
