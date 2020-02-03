@@ -2,6 +2,8 @@ class Solution:
     def longestCommonPrefix(self, strs):
         if len(strs) == 0:
             return ''
+        if len(strs) == 1:
+            return strs[0]
         counter = 0
         answer = ''
         previous = False
