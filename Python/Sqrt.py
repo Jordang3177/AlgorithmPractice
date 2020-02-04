@@ -1,6 +1,6 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        return 0
+        return int(x ** (1 / 2))
 
     def testMySqrt(self):
         assert self.mySqrt(2) == 1
