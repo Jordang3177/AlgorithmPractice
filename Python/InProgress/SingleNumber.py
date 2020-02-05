@@ -1,6 +1,12 @@
 class Solution:
     def singleNumber(self, nums):
+        # This is the faster solution
         return 2*sum(set(nums)) - sum(nums)
+        # However this solution will use slightly less memory
+        # answer = 0
+        # for value in nums:
+        #     answer ^= value
+        # return answer
 
     def testSingleNumber(self):
         assert self.singleNumber([1, 1, 2, 2, 3, 3, 4]) == 4
