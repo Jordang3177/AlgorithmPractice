@@ -1,6 +1,6 @@
 class Solution:
     def singleNumber(self, nums):
-        return nums
+        return 2*sum(set(nums)) - sum(nums)
 
     def testSingleNumber(self):
         assert self.singleNumber([1, 1, 2, 2, 3, 3, 4]) == 4
