@@ -1,24 +1,13 @@
-import math
-
 class Solution:
     def trailingZeroes(self, n: int):
-        if n < 0:
-            return 0
-        if n == 0:
-            return 0
-        if n == 1:
+        if n < 5:
             return 0
         else:
-            fact = math.factorial(n)
             answer = 0
-            i = len(str(fact)) - 1
-            sfact = str(fact)
-            while i >= 0:
-                if sfact[i] == '0':
-                    answer += 1
-                    i = i - 1
-                else:
-                    return answer
+            while n != 0:
+                n //= 5
+                answer += n
+            return answer
 
     def testTrailingZeroes(self):
         assert self.trailingZeroes(3) == 0
@@ -43,6 +32,12 @@ class Solution:
         assert self.trailingZeroes(19) == 3
         assert self.trailingZeroes(20) == 4
         assert self.trailingZeroes(21) == 4
+        assert self.trailingZeroes(22) == 4
+        assert self.trailingZeroes(23) == 4
+        assert self.trailingZeroes(24) == 4
+        assert self.trailingZeroes(25) == 6
+        assert self.trailingZeroes(30) == 7
+        assert self.trailingZeroes(35) == 8
 
 if __name__ == "__main__":
     S = Solution()
