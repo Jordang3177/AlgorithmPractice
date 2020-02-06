@@ -38,6 +38,8 @@ class Solution:
         assert self.trailingZeroes(25) == 6
         assert self.trailingZeroes(30) == 7
         assert self.trailingZeroes(35) == 8
+        assert self.trailingZeroes(50) == 12
+        
 
 if __name__ == "__main__":
     S = Solution()
