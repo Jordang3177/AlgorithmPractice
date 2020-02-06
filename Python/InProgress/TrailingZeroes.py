@@ -39,7 +39,11 @@ class Solution:
         assert self.trailingZeroes(30) == 7
         assert self.trailingZeroes(35) == 8
         assert self.trailingZeroes(50) == 12
-        
+        assert self.trailingZeroes(100) == 24
+        assert self.trailingZeroes(500) == 124
+        assert self.trailingZeroes(5000) == 1249
+        assert self.trailingZeroes(1000000) == 249998
+
 
 if __name__ == "__main__":
     S = Solution()
