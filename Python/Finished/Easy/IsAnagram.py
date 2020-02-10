@@ -10,8 +10,8 @@ class Solution:
         for i in range(0, len(s)):
             words[s[i]] += 1
             words[t[i]] -= 1
-        for value, key in words.items():
-            if key != 0:
+        for value in words.values():
+            if value != 0:
                 return False
         return True
 
