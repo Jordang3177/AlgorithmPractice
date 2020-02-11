@@ -1,8 +1,9 @@
-
-
 class Solution():
     def find_even_index(self, arr):
-        return 3
+        for i in range(0, len(arr)):
+            if sum(arr[0:i]) == sum(arr[i+1:len(arr)]):
+                return i
+        return -1
 
     def test_find_even_index(self):
         assert self.find_even_index([1,2,3,4,3,2,1]) == 3
