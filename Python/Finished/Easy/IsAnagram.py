@@ -8,8 +8,8 @@ class Solution:
         for value in alphabet:
             words[value] = 0
         for i in range(0, len(s)):
-            words[s[i]] += 1
-            words[t[i]] -= 1
+            words[s[i].lower()] += 1
+            words[t[i].lower()] -= 1
         for value in words.values():
             if value != 0:
                 return False
@@ -21,6 +21,7 @@ class Solution:
         assert self.isAnagram('rat', 'car') == False
         assert self.isAnagram('too', 'oto') == True
         assert self.isAnagram('howaboutnow', 'howaboutnoo') == False
+        assert self.isAnagram('Howabout', 'howabout') == True
 
 if __name__ == '__main__':
     S = Solution()
