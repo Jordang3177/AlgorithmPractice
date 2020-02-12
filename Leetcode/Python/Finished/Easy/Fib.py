@@ -7,16 +7,16 @@ class Solution:
         return memo[N]
 
     def testFib(self):
-        # assert self.fib(0) == 0
-        # assert self.fib(1) == 1
-        # assert self.fib(2) == 1
-        # assert self.fib(3) == 2
-        # assert self.fib(4) == 3
-        # assert self.fib(5) == 5
-        # assert self.fib(6) == 8
-        # assert self.fib(7) == 13
-        # assert self.fib(8) == 21
-        # assert self.fib(9) == 34
+        assert self.fib(0) == 0
+        assert self.fib(1) == 1
+        assert self.fib(2) == 1
+        assert self.fib(3) == 2
+        assert self.fib(4) == 3
+        assert self.fib(5) == 5
+        assert self.fib(6) == 8
+        assert self.fib(7) == 13
+        assert self.fib(8) == 21
+        assert self.fib(9) == 34
         assert self.fib(10) == 55
         assert self.fib(20) == 6765
         assert self.fib(30) == 832040
