@@ -1,26 +1,23 @@
 class Solution:
     def longestCommonPrefix(self, strs):
-        if len(strs) == 0:
+        if not strs:
             return ''
-        if len(strs) == 1:
-            return strs[0]
-        counter = 0
+        first, last, i = min(strs), max(strs), 0
         answer = ''
-        previous = False
-        for char in strs[0]:
-            for str in strs:
-                if char in str:
-                    counter += 1
-                else:
-                    print('work in progress')
+        for i in range(min(len(first), len(last))):
+            if first[i] != last[i]:
+                return answer
+            answer += first[i]
+            i += 1
+        return answer
 
     def testLongestCommonPrefix(self):
         assert self.longestCommonPrefix(['flower', 'flow', 'flight']) == 'fl'
         assert self.longestCommonPrefix(['dog', 'racecar', 'car']) == ''
-        assert self.longestCommonPrefix(['wow', 'wellthenwow', 'wosswow']) == 'wow'
+        assert self.longestCommonPrefix(['wow', 'wellthenwow', 'wosswow']) == 'w'
         assert self.longestCommonPrefix(['wow', 'wow', 'wow', 'wow', 'wow']) == 'wow'
         assert self.longestCommonPrefix(['lol', 'lol', 'lol', 'lol', 'ololol', 'n']) == ''
-        assert self.longestCommonPrefix(['okthen', 'lol', 'wow', 'only']) == 'o'
+        assert self.longestCommonPrefix(['okthen', 'lol', 'wow', 'only']) == ''
         assert self.longestCommonPrefix([]) == ''
         assert self.longestCommonPrefix(['one']) == 'one'
 
