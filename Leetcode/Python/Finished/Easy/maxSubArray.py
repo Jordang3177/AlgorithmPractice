@@ -18,3 +18,8 @@ if __name__ == '__main__':
     S = Solution()
     S.test()
     print("All Tests Passed")
+
+
+
+else:
+    print('error')
