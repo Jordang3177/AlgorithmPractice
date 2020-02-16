@@ -48,23 +48,3 @@ class Solution:
             return -2 ** 31
         return answer
 
-# def test_myAtoi():
-#     assert myAtoi('42') == 42
-#     assert myAtoi('3439') == 3439
-#     assert myAtoi('-13') == -13
-#     assert myAtoi("   -42") == -42
-#     assert myAtoi('       wow a 123') == 0
-#     assert myAtoi('wow a 123') == 0
-#     assert myAtoi('    123') == 123
-#     assert myAtoi('     wow a -123') == 0
-#     assert myAtoi('-23434399539583843') == -2**31
-#     assert myAtoi('23433885738963863') == 2**31 - 1
-#     assert myAtoi('-1+') == -1
-#     assert myAtoi('+-2') == 0
-#     assert myAtoi('-+2') == 0
-#     assert myAtoi('0000000') == 0
-#     assert myAtoi('     00000   ') == 0
-#     assert myAtoi('0-1') == 0
-#     assert myAtoi('    0-1') == 0
-#     assert myAtoi('0+1') == 0
-#     assert myAtoi('     0+1') == 0
