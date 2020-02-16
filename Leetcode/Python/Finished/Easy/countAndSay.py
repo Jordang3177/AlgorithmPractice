@@ -21,17 +21,3 @@ class Solution:
             answer = ''
             current_number = prev_answer[0]
         return prev_answer
-
-    def test(self):
-        assert self.countAndSay(1) == '1'
-        assert self.countAndSay(2) == '11'
-        assert self.countAndSay(3) == '21'
-        assert self.countAndSay(4) == '1211'
-        assert self.countAndSay(5) == '111221'
-        assert self.countAndSay(6) == '312211'
-        assert self.countAndSay(7) == '13112221'
-
-if __name__ == '__main__':
-    S = Solution()
-    S.test()
-    print("All Tests Passed")
