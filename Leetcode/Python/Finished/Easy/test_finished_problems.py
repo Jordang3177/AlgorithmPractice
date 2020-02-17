@@ -9,6 +9,7 @@ from Leetcode.Python.Finished.Easy.DefangIP import Solution as DefangSolution
 from Leetcode.Python.Finished.Easy.Fib import Solution as FibSolution
 from Leetcode.Python.Finished.Easy.IntegerToRoman import Solution as ITRSolution
 from Leetcode.Python.Finished.Easy.IsAnagram import Solution as AnagramSolution
+from Leetcode.Python.Finished.Easy.reverse_words import Solution as RWSolution
 
 class TestSolution(TestCase):
     def test_count_and_say(self):
@@ -113,3 +114,13 @@ class TestSolution(TestCase):
     def test_is_anagram(self):
         S = AnagramSolution()
         self.assertEqual(S.isAnagram('anagram', 'nagaram'), True)
+        self.assertEqual(S.isAnagram('rat', 'car'), False)
+        self.assertEqual(S.isAnagram('too', 'oto'), True)
+        self.assertEqual(S.isAnagram('wellthen', 'hi'), False)
+
+    def test_reverse_words(self):
+        S = RWSolution()
+        self.assertEqual(S.reverse_words("let's get this started"), "s'tel teg siht detrats")
+        self.assertEqual(S.reverse_words("how about now"), 'woh tuoba won')
+        self.assertEqual(S.reverse_words("Well then"), "lleW neht")
+        self.assertEqual(S.reverse_words("Come to me please"), "emoC ot em esaelp")

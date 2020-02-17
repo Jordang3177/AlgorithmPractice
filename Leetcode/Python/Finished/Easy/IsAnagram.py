@@ -14,16 +14,3 @@ class Solution:
             if value != 0:
                 return False
         return True
-
-
-    def testIsAnagram(self):
-        assert self.isAnagram('anagram', 'nagaram') == True
-        assert self.isAnagram('rat', 'car') == False
-        assert self.isAnagram('too', 'oto') == True
-        assert self.isAnagram('howaboutnow', 'howaboutnoo') == False
-        assert self.isAnagram('Howabout', 'howabout') == True
-
-if __name__ == '__main__':
-    S = Solution()
-    S.testIsAnagram()
-    print("All Tests Passed")
