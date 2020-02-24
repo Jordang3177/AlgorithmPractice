@@ -5,14 +5,13 @@ class Solution:
         while i < j:
             if not s[i].isalnum():
                 i += 1
-                continue
             elif not s[j].isalnum():
                 j -= 1
-                continue
             elif s[i].lower() != s[j].lower():
                 return False
-            i += 1
-            j -= 1
+            else:
+                i += 1
+                j -= 1
         return True
 
 
