@@ -9,6 +9,5 @@ class Solution:
             elif i % 3 == 0:
                 answer.append('Fizz')
             else:
-                stri = str(i)
-                answer.append(stri)
+                answer.append(str(i))
         return answer
