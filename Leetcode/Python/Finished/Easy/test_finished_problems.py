@@ -10,6 +10,7 @@ from Leetcode.Python.Finished.Easy.Fib import Solution as FibSolution
 from Leetcode.Python.Finished.Easy.IntegerToRoman import Solution as ITRSolution
 from Leetcode.Python.Finished.Easy.IsAnagram import Solution as AnagramSolution
 from Leetcode.Python.Finished.Easy.reverse_words import Solution as RWSolution
+from Leetcode.Python.Finished.Easy.FizzBuzz import Solution as FBSolution
 
 class TestSolution(TestCase):
     def test_count_and_say(self):
@@ -124,3 +125,21 @@ class TestSolution(TestCase):
         self.assertEqual(S.reverse_words("how about now"), 'woh tuoba won')
         self.assertEqual(S.reverse_words("Well then"), "lleW neht")
         self.assertEqual(S.reverse_words("Come to me please"), "emoC ot em esaelp")
+
+    def test_fizz_buzz(self):
+        S = FBSolution()
+        self.assertEqual(S.fizzBuzz(1), ['1'])
+        self.assertEqual(S.fizzBuzz(2), ['1', '2'])
+        self.assertEqual(S.fizzBuzz(3), ['1', '2', 'Fizz'])
+        self.assertEqual(S.fizzBuzz(4), ['1', '2', 'Fizz', '4'])
+        self.assertEqual(S.fizzBuzz(5), ['1', '2', 'Fizz', '4', 'Buzz'])
+        self.assertEqual(S.fizzBuzz(6), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz'])
+        self.assertEqual(S.fizzBuzz(7), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7'])
+        self.assertEqual(S.fizzBuzz(8), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8'])
+        self.assertEqual(S.fizzBuzz(9), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz'])
+        self.assertEqual(S.fizzBuzz(10), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz'])
+        self.assertEqual(S.fizzBuzz(11), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11'])
+        self.assertEqual(S.fizzBuzz(12), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz'])
+        self.assertEqual(S.fizzBuzz(13), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13'])
+        self.assertEqual(S.fizzBuzz(14), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14'])
+        self.assertEqual(S.fizzBuzz(15), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz'])
