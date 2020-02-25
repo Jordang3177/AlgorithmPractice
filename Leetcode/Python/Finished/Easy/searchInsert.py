@@ -1,6 +1,12 @@
 # This algorithm got faster than 93% of people in speed and 94% of people in memory space.
 class Solution:
     def searchInsert(self, nums, target):
+        """
+        returns the index where the target would go in the sorted nums array
+        :param nums: array of ints
+        :param target: int
+        :return: int
+        """
         if target in nums:
             return nums.index(target)
         if target > nums[len(nums) - 1]:

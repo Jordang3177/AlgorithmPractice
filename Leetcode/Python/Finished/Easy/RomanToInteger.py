@@ -1,4 +1,9 @@
 def romanToInt(s):
+    """
+    returns the number representation of the given roman string
+    :param s: str
+    :return: int
+    """
     answer = 0
     while len(s) > 0:
         if len(s) > 1:

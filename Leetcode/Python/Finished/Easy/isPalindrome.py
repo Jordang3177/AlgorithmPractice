@@ -1,5 +1,10 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
+        """
+        given an int, returns if it's a palindrome
+        :param x: x
+        :return: bool
+        """
         y = str(x)
         if len(y) == 0:
             return True

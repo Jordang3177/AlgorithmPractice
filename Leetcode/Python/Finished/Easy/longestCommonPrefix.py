@@ -1,5 +1,10 @@
 class Solution:
     def longestCommonPrefix(self, strs):
+        """
+        given an array of strings, returns they longest common prefix
+        :param strs: array of strings
+        :return: str
+        """
         if not strs:
             return ''
         first, last, i = min(strs), max(strs), 0

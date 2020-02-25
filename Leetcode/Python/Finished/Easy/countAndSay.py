@@ -1,5 +1,10 @@
 class Solution:
     def countAndSay(self, n: int) -> str:
+        """
+        returns the count and the number of each number in the previous answer
+        :param n: int
+        :return: str
+        """
         if n == 1:
             return '1'
         prev_answer = '1'

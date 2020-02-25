@@ -1,5 +1,10 @@
 class Solution:
     def singleNumber(self, nums):
+        """
+        returns the number that is only used once in the given array
+        :param nums: array of ints
+        :return: int
+        """
         # This is the faster solution
         return 2*sum(set(nums)) - sum(nums)
         # However this solution will use slightly less memory

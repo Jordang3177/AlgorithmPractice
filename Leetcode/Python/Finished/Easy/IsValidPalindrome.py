@@ -1,5 +1,10 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
+        """
+        given string, returns if the string is a palindrome (if reversed if it's the same as original string)
+        :param s: str
+        :return: bool
+        """
         j = len(s) - 1
         i = 0
         while i < j:

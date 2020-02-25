@@ -1,5 +1,10 @@
 class Solution:
     def plusOne(self, digits):
+        """
+        given an array representation of a number, returns the array representation of the number plus one
+        :param digits: array of ints
+        :return: array of ints
+        """
         if digits[len(digits) - 1] != 9:
             digits[len(digits) - 1] += 1
             return digits

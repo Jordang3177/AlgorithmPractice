@@ -1,5 +1,11 @@
 class Solution:
     def removeElement(self, nums, val):
+        """
+        given an array of ints and a value, will return the len of the array after removing all of the values in the array
+        :param nums: array of ints
+        :param val: int
+        :return: int
+        """
         while val in nums:
             nums.remove(val)
         return len(nums)

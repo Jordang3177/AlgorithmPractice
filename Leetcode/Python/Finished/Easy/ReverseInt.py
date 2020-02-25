@@ -1,4 +1,9 @@
 def reverse(x: int):
+    """
+    reverses the given number
+    :param x: int
+    :return: int
+    """
     if x == '':
         return 0
     if x > 2 ** 31 - 1 or x < -2 ** 31:

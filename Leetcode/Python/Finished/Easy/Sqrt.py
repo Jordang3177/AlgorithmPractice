@@ -1,5 +1,10 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
+        """
+        returns the square root of the given number in integer form
+        :param x: int
+        :return: int
+        """
         return int(x ** (1 / 2))
 
     def testMySqrt(self):

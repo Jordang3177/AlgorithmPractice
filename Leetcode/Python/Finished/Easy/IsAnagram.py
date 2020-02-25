@@ -1,5 +1,11 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        """
+        given two strings, returns if they are anagrams
+        :param s: str
+        :param t: str
+        :return: bool
+        """
         if len(s) != len(t):
             return False
         words = {}

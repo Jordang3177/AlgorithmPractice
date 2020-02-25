@@ -1,5 +1,11 @@
 class Solution:
     def strStr(self, haystack: str, needle: str):
+        """
+        returns the index that the needle is at in the haystack
+        :param haystack: str
+        :param needle: str
+        :return: int
+        """
         if needle not in haystack:
             return -1
         else:

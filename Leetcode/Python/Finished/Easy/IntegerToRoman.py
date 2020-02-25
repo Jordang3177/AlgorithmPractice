@@ -1,5 +1,10 @@
 class Solution:
     def intToRoman(self, num):
+        """
+        returns the Roman representation of the given Number
+        :param num: int
+        :return: str
+        """
         answer = ""
         while num > 0:
             if num >= 1000:

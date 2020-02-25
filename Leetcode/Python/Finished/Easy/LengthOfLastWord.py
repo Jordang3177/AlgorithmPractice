@@ -1,5 +1,10 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
+        """
+        returns the length of the last word in the string
+        :param s: str
+        :return: int
+        """
         if len(s) == 0:
             return 0
         if ' ' not in s:
