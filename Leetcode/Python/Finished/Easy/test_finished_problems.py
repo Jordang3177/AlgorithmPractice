@@ -14,6 +14,7 @@ from Leetcode.Python.Finished.Easy.reverse_words import Solution as RWSolution
 from Leetcode.Python.Finished.Easy.FizzBuzz import Solution as FBSolution
 from Leetcode.Python.Finished.Easy.SameTree import Solution as TreeSolution
 from Leetcode.Python.Finished.Easy.SymmetricTree import Solution as SymmetricSolution
+from Leetcode.Python.Finished.Easy.max_depth import Solution as DepthSolution
 
 
 class TestSolution(TestCase):
@@ -188,3 +189,21 @@ class TestSolution(TestCase):
         tree1.right = Tree()
         tree1.right.val = 2
         self.assertEqual(S.isSymmetric(tree1), True)
+
+    def test_max_depth(self):
+        S = DepthSolution()
+        self.assertEqual(S.maxDepth(None), 0)
+        tree1 = Tree()
+        tree1.val = 1
+        self.assertEqual(S.maxDepth(tree1), 1)
+        tree1.left = Tree()
+        tree1.left.val = 3
+        self.assertEqual(S.maxDepth(tree1), 2)
+        tree1.left.left = Tree()
+        tree1.left.left.val = 5
+        self.assertEqual(S.maxDepth(tree1), 3)
+        tree1.left.left.left = Tree()
+        tree1.left.left.left.val = 4
+        tree1.left.left.left.left = Tree()
+        tree1.left.left.left.left.val = 7
+        self.assertEqual(S.maxDepth(tree1), 5)
