@@ -16,6 +16,7 @@ from Leetcode.Python.Finished.Easy.SameTree import Solution as TreeSolution
 from Leetcode.Python.Finished.Easy.SymmetricTree import Solution as SymmetricSolution
 from Leetcode.Python.Finished.Easy.max_depth import Solution as DepthSolution
 from Leetcode.Python.Finished.Easy.min_depth import Solution as MinDepthSolution
+from Leetcode.Python.Finished.Easy.PathSum import Solution as PathSumSolution
 
 
 class TestSolution(TestCase):
@@ -225,3 +226,39 @@ class TestSolution(TestCase):
         tree1.right.right = Tree()
         tree1.right.right.val = 5
         self.assertEqual(S.minDepth(tree1), 2)
+
+    def test_path_sum(self):
+        S = PathSumSolution()
+        self.assertEqual(S.hasPathSum(None, 0), False)
+        tree1 = Tree()
+        tree1.val = 5
+        self.assertEqual(S.hasPathSum(tree1, 5), True)
+        self.assertEqual(S.hasPathSum(tree1, 3), False)
+        tree1.left = Tree()
+        tree1.left.val = 4
+        tree1.right = Tree()
+        tree1.right.val = 8
+        self.assertEqual(S.hasPathSum(tree1, 9), True)
+        self.assertEqual(S.hasPathSum(tree1, 13), True)
+        self.assertEqual(S.hasPathSum(tree1, 5), False)
+        tree1.left.left = Tree()
+        tree1.left.left.val = 11
+        tree1.left.left.left = Tree()
+        tree1.left.left.left.val = 7
+        tree1.left.left.right = Tree()
+        tree1.left.left.right.val = 2
+        self.assertEqual(S.hasPathSum(tree1, 22), True)
+        self.assertEqual(S.hasPathSum(tree1, 27), True)
+        self.assertEqual(S.hasPathSum(tree1, 13), True)
+        self.assertEqual(S.hasPathSum(tree1, 9), False)
+        tree1.right.left = Tree()
+        tree1.right.left.val = 13
+        tree1.right.right = Tree()
+        tree1.right.right.val = 4
+        tree1.right.right.right = Tree()
+        tree1.right.right.right.val = 1
+        self.assertEqual(S.hasPathSum(tree1, 22), True)
+        self.assertEqual(S.hasPathSum(tree1, 27), True)
+        self.assertEqual(S.hasPathSum(tree1, 26), True)
+        self.assertEqual(S.hasPathSum(tree1, 18), True)
+        self.assertEqual(S.hasPathSum(tree1, 13), False)
