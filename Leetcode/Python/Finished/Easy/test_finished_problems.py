@@ -15,6 +15,7 @@ from Leetcode.Python.Finished.Easy.FizzBuzz import Solution as FBSolution
 from Leetcode.Python.Finished.Easy.SameTree import Solution as TreeSolution
 from Leetcode.Python.Finished.Easy.SymmetricTree import Solution as SymmetricSolution
 from Leetcode.Python.Finished.Easy.max_depth import Solution as DepthSolution
+from Leetcode.Python.Finished.Easy.min_depth import Solution as MinDepthSolution
 
 
 class TestSolution(TestCase):
@@ -207,3 +208,20 @@ class TestSolution(TestCase):
         tree1.left.left.left.left = Tree()
         tree1.left.left.left.left.val = 7
         self.assertEqual(S.maxDepth(tree1), 5)
+
+    def test_min_depth(self):
+        S = MinDepthSolution()
+        self.assertEqual(S.minDepth(None), 0)
+        tree1 = Tree()
+        tree1.val = 1
+        self.assertEqual(S.minDepth(tree1), 1)
+        tree1.left = Tree()
+        tree1.left.val = 2
+        self.assertEqual(S.minDepth(tree1), 2)
+        tree1.right = Tree()
+        tree1.right.val = 3
+        tree1.right.left = Tree()
+        tree1.right.left.val = 4
+        tree1.right.right = Tree()
+        tree1.right.right.val = 5
+        self.assertEqual(S.minDepth(tree1), 2)
