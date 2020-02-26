@@ -1,4 +1,5 @@
 from unittest import TestCase
+from Leetcode.Python.Finished.Easy.SameTree import Tree as Tree
 
 from Leetcode.Python.Finished.Easy.countAndSay import Solution as CountSolution
 from Leetcode.Python.Finished.Easy.AddBinary import Solution as BinarySolution
@@ -11,6 +12,8 @@ from Leetcode.Python.Finished.Easy.IntegerToRoman import Solution as ITRSolution
 from Leetcode.Python.Finished.Easy.IsAnagram import Solution as AnagramSolution
 from Leetcode.Python.Finished.Easy.reverse_words import Solution as RWSolution
 from Leetcode.Python.Finished.Easy.FizzBuzz import Solution as FBSolution
+from Leetcode.Python.Finished.Easy.SameTree import Solution as TreeSolution
+
 
 class TestSolution(TestCase):
     def test_count_and_say(self):
@@ -143,3 +146,30 @@ class TestSolution(TestCase):
         self.assertEqual(S.fizzBuzz(13), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13'])
         self.assertEqual(S.fizzBuzz(14), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14'])
         self.assertEqual(S.fizzBuzz(15), ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz'])
+
+    def test_same_tree(self):
+        S = TreeSolution()
+        tree1 = Tree()
+        tree1.val = 1
+        tree1.left = Tree()
+        tree1.left.data = 2
+        tree1.right = Tree()
+        tree1.right.data = 3
+
+        tree2 = Tree()
+        tree2.val = 1
+        tree2.left = Tree()
+        tree2.left.data = 2
+        tree2.right = Tree()
+        tree2.right.data = 3
+
+        self.assertEqual(S.same_tree(tree1, tree2), True)
+
+        tree2.left.left = Tree()
+        tree2.left.left.val = 4
+
+        self.assertEqual(S.same_tree(tree1, tree2), False)
+
+        tree2.left.left = None
+
+        self.assertEqual(S.same_tree(tree1, tree2), True)
