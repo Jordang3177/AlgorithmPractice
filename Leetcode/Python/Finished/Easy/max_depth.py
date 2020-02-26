@@ -1,5 +1,5 @@
 class Solution:
-    def maxDepth(self, root: TreeNode) -> int:
+    def maxDepth(self, root) -> int:
         answer = 1
         if not root:
             return 0
