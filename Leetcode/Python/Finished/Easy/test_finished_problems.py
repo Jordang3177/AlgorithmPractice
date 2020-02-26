@@ -13,6 +13,7 @@ from Leetcode.Python.Finished.Easy.IsAnagram import Solution as AnagramSolution
 from Leetcode.Python.Finished.Easy.reverse_words import Solution as RWSolution
 from Leetcode.Python.Finished.Easy.FizzBuzz import Solution as FBSolution
 from Leetcode.Python.Finished.Easy.SameTree import Solution as TreeSolution
+from Leetcode.Python.Finished.Easy.SymmetricTree import Solution as SymmetricSolution
 
 
 class TestSolution(TestCase):
@@ -173,3 +174,17 @@ class TestSolution(TestCase):
         tree2.left.left = None
 
         self.assertEqual(S.same_tree(tree1, tree2), True)
+
+    def test_symmetric_tree(self):
+        S = SymmetricSolution()
+        self.assertEqual(S.isSymmetric(None), True)
+
+        tree1 = Tree()
+        tree1.val = 1
+        self.assertEqual(S.isSymmetric(tree1), True)
+        tree1.left = Tree()
+        tree1.left.val = 2
+        self.assertEqual(S.isSymmetric(tree1), False)
+        tree1.right = Tree()
+        tree1.right.val = 2
+        self.assertEqual(S.isSymmetric(tree1), True)
