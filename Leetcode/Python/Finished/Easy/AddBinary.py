@@ -24,10 +24,6 @@ class Solution:
         if num == 0:
             return '0'
         while num != 0:
-            if num % 2 == 0:
-                answer = '0' + answer
-                num = int(num//2)
-            else:
-                answer = '1' + answer
-                num = int(num//2)
+            answer = str(num % 2) + answer
+            num = num // 2
         return answer
