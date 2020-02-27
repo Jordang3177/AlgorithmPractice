@@ -17,6 +17,7 @@ from Leetcode.Python.Finished.Easy.SymmetricTree import Solution as SymmetricSol
 from Leetcode.Python.Finished.Easy.max_depth import Solution as DepthSolution
 from Leetcode.Python.Finished.Easy.min_depth import Solution as MinDepthSolution
 from Leetcode.Python.Finished.Easy.PathSum import Solution as PathSumSolution
+from Leetcode.Python.Finished.Easy.isPalindrome import Solution as NumPalindromeSolution
 
 
 class TestSolution(TestCase):
@@ -262,3 +263,16 @@ class TestSolution(TestCase):
         self.assertEqual(S.hasPathSum(tree1, 26), True)
         self.assertEqual(S.hasPathSum(tree1, 18), True)
         self.assertEqual(S.hasPathSum(tree1, 13), False)
+
+    def test_ispalindrome(self):
+        S = NumPalindromeSolution()
+        self.assertEqual(S.isPalindrome(121), True)
+        self.assertEqual(S.isPalindrome(-121), False)
+        self.assertEqual(S.isPalindrome(0), True)
+        self.assertEqual(S.isPalindrome(11), True)
+        self.assertEqual(S.isPalindrome(1234321), True)
+        self.assertEqual(S.isPalindrome(191), True)
+        self.assertEqual(S.isPalindrome(144441), True)
+        self.assertEqual(S.isPalindrome(-1), False)
+        self.assertEqual(S.isPalindrome(12345678), False)
+        self.assertEqual(S.isPalindrome(59678), False)
