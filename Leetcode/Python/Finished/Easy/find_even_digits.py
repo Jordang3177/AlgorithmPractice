@@ -1,9 +1,9 @@
 class Solution:
     def findNumbers(self, nums):
         """
-        
-        :param nums:
-        :return:
+        returns the number of numbers in the list with even digits
+        :param nums: Array of Int
+        :return: int
         """
         answer = 0
         for number in nums:
