@@ -1,20 +1,21 @@
 class Solution:
     def longestCommonPrefix(self, strs):
         """
-        given an array of strings, returns they longest common prefix
-        :param strs: array of strings
-        :return: str
+        returns the longest common prefix among the given list of strings
+        :param strs: List of String
+        :return: String
         """
-        if not strs:
+        if len(strs) < 1:
             return ''
-        first, last, i = min(strs), max(strs), 0
-        answer = ''
+        if len(strs) < 2:
+            return strs[0]
+        first, last, answer = min(strs), max(strs), []
         for i in range(min(len(first), len(last))):
-            if first[i] != last[i]:
-                return answer
-            answer += first[i]
-            i += 1
-        return answer
+            if first[i] == last[i]:
+                answer.append(first[i])
+            else:
+                return ''.join(answer)
+        return ''.join(answer)
 
     def testLongestCommonPrefix(self):
         assert self.longestCommonPrefix(['flower', 'flow', 'flight']) == 'fl'
