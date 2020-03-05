@@ -18,6 +18,7 @@ from Leetcode.Python.Finished.Easy.max_depth import Solution as DepthSolution
 from Leetcode.Python.Finished.Easy.min_depth import Solution as MinDepthSolution
 from Leetcode.Python.Finished.Easy.PathSum import Solution as PathSumSolution
 from Leetcode.Python.Finished.Easy.isPalindrome import Solution as NumPalindromeSolution
+from Leetcode.Python.Finished.Easy.RemoveElements import Solution as RemoveElementsArraySolution
 
 
 class TestSolution(TestCase):
@@ -276,3 +277,13 @@ class TestSolution(TestCase):
         self.assertEqual(S.isPalindrome(-1), False)
         self.assertEqual(S.isPalindrome(12345678), False)
         self.assertEqual(S.isPalindrome(59678), False)
+
+    def test_remove_elements(self):
+        S = RemoveElementsArraySolution()
+        self.assertEqual(S.removeElement([1,2,3,4,5], 1), 4)
+        self.assertEqual(S.removeElement([1,1,1,1,1,1,1], 1), 0)
+        self.assertEqual(S.removeElement([1,1,1,1,1,1,1,1,1,1,1],1), 0)
+        self.assertEqual(S.removeElement([1,2,3,4,5,6,7,8], 10), 8)
+        self.assertEqual(S.removeElement([1,2,3,4,5,6,7,8,9,10], 10), 9)
+        self.assertEqual(S.removeElement([1], 1), 0)
+        self.assertEqual(S.removeElement([1,2,3,4], 2), 3)
