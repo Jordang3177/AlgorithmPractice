@@ -19,6 +19,7 @@ from Leetcode.Python.Finished.Easy.min_depth import Solution as MinDepthSolution
 from Leetcode.Python.Finished.Easy.PathSum import Solution as PathSumSolution
 from Leetcode.Python.Finished.Easy.isPalindrome import Solution as NumPalindromeSolution
 from Leetcode.Python.Finished.Easy.RemoveElements import Solution as RemoveElementsArraySolution
+from Leetcode.Python.Finished.Easy.is_happy import Solution as IsHappySolution
 
 
 class TestSolution(TestCase):
@@ -161,23 +162,17 @@ class TestSolution(TestCase):
         tree1.left.data = 2
         tree1.right = Tree()
         tree1.right.data = 3
-
         tree2 = Tree()
         tree2.val = 1
         tree2.left = Tree()
         tree2.left.data = 2
         tree2.right = Tree()
         tree2.right.data = 3
-
         self.assertEqual(S.same_tree(tree1, tree2), True)
-
         tree2.left.left = Tree()
         tree2.left.left.val = 4
-
         self.assertEqual(S.same_tree(tree1, tree2), False)
-
         tree2.left.left = None
-
         self.assertEqual(S.same_tree(tree1, tree2), True)
 
     def test_symmetric_tree(self):
@@ -287,3 +282,11 @@ class TestSolution(TestCase):
         self.assertEqual(S.removeElement([1,2,3,4,5,6,7,8,9,10], 10), 9)
         self.assertEqual(S.removeElement([1], 1), 0)
         self.assertEqual(S.removeElement([1,2,3,4], 2), 3)
+
+    def is_happy_solution(self):
+        S = IsHappySolution()
+        self.assertEqual(S.isHappy(1), True)
+        self.assertEqual(S.isHappy(12), False)
+        self.assertEqual(S.isHappy(1111111111), True)
+        self.assertEqual(S.isHappy(1221), True)
+        self.assertEqual(S.isHappy(123445), False)
