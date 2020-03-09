@@ -20,6 +20,7 @@ from Leetcode.Python.Finished.Easy.PathSum import Solution as PathSumSolution
 from Leetcode.Python.Finished.Easy.isPalindrome import Solution as NumPalindromeSolution
 from Leetcode.Python.Finished.Easy.RemoveElements import Solution as RemoveElementsArraySolution
 from Leetcode.Python.Finished.Easy.is_happy import Solution as IsHappySolution
+from Leetcode.Python.Finished.Easy.how_many_smaller_values import Solution as SmallerValuesSolution
 
 
 class TestSolution(TestCase):
@@ -290,3 +291,10 @@ class TestSolution(TestCase):
         self.assertEqual(S.isHappy(1111111111), True)
         self.assertEqual(S.isHappy(1221), True)
         self.assertEqual(S.isHappy(123445), False)
+
+    def smaller_values_solution(self):
+        S = SmallerValuesSolution()
+        self.assertEqual(S.smallerNumbersThanCurrent([8,1,2,2,3]), [4,0,1,1,3])
+        self.assertEqual(S.smallerNumbersThanCurrent([1,2,3,4,5,7]), [0,1,2,3,4,5])
+        self.assertEqual(S.smallerNumbersThanCurrent([10,9,88,7]), [2, 1, 3, 0])
+        self.assertEqual(S.smallerNumbersThanCurrent([11,14,22,33,0]), [1,2,3,4,0])
