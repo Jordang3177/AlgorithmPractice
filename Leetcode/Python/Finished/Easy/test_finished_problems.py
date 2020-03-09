@@ -284,7 +284,7 @@ class TestSolution(TestCase):
         self.assertEqual(S.removeElement([1], 1), 0)
         self.assertEqual(S.removeElement([1,2,3,4], 2), 3)
 
-    def is_happy_solution(self):
+    def test_is_happy(self):
         S = IsHappySolution()
         self.assertEqual(S.isHappy(1), True)
         self.assertEqual(S.isHappy(12), False)
@@ -292,7 +292,7 @@ class TestSolution(TestCase):
         self.assertEqual(S.isHappy(1221), True)
         self.assertEqual(S.isHappy(123445), False)
 
-    def smaller_values_solution(self):
+    def test_smaller_values(self):
         S = SmallerValuesSolution()
         self.assertEqual(S.smallerNumbersThanCurrent([8,1,2,2,3]), [4,0,1,1,3])
         self.assertEqual(S.smallerNumbersThanCurrent([1,2,3,4,5,7]), [0,1,2,3,4,5])
