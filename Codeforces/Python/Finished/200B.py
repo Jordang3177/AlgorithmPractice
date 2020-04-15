@@ -1,7 +1,7 @@
 n = int(input())
 drinks = list(map(int, input().split(" ")))
-answer = 0
+percentage = 0
 fraction = 1/ n
 for drink in drinks:
-    answer += fraction * drink
-print(answer)
+    percentage += fraction * drink
+print(percentage)
