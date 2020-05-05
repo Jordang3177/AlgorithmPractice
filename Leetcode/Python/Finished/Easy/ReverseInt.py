@@ -4,28 +4,23 @@ def reverse(x: int):
     :param x: int
     :return: int
     """
-    if x == '':
-        return 0
-    if x > 2 ** 31 - 1 or x < -2 ** 31:
-        return 0
-    y = str(x)
-    answer = ''
-    if y[0] == '-':
-        y = y[1:len(y)]
-    for num in y:
-        answer += y[len(y) - 1]
-        y = y[0:len(y) - 1]
-    for num in answer:
-        if answer[0] == 0:
-            answer = answer[1:len(answer)]
-        else:
-            break
-    answer = int(answer)
     if x < 0:
-        answer = answer * -1
-    if answer > 2 ** 31 - 1 or answer < -2 ** 31:
+        signed = True
+    else:
+        signed = False
+    x = str(x)
+    if signed:
+        x = x[1:]
+    x = x[::-1]
+    x = int(x)
+    if signed:
+        x = -x
+    if x > 2 ** 31 - 1:
         return 0
-    return answer
+    if x < -2 ** 31:
+        return 0
+    else:
+        return x
 
 
 def test_reverse():
