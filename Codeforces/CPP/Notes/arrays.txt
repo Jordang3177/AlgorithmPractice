@@ -1,0 +1,27 @@
+New Arrays:
+string array[n];
+int array[n];
+string array[] = { "Hello", "why" };
+int array[] = {1, 2, 3, 4};
+
+Inserting Elements of an Array:
+array[i] = 1;
+Where i is the index that you are inserting the element into the array.
+
+Finding the size of an Array:
+sizeof(array) / sizeof(array[0]);
+This is taking the size of the array in bytes divided by the size of the first element in bytes. Which will leave you with the number of elements in the array.
+
+Sorting an Array:
+sort(array, array + n);
+the first argument is the starting point of where you want to sort the array and the second is the end point of where you want to sort the array exclusive.
+
+Reversing an Array:
+reverse(array, array + n);
+the first argument is the starting point of where you want to reverse the array and the second is the end point of where you want to reverse the array exclusive.
+
+Sum of an Array:
+accumulate(array, array + n, sum);
+accumulate is in the numeric library and the first argument is the starting point of the sum, second is the ending point exclusive, third argument 
+is the original sum.
+
