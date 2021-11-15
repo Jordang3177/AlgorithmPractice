@@ -1,8 +1,6 @@
-import java.util.Stack;
-
-public class LargestPrimeFactor {
+public class Problem003 {
     public static void main(String[] args) {
-        LargestPrimeFactor obj = new LargestPrimeFactor();
+        Problem003 obj = new Problem003();
         long answer = obj.function(600851475143L);
         System.out.println(answer);
     }

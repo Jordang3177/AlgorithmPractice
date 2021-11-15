@@ -1,6 +1,6 @@
-public class LargestPalindromeNumber {
+public class Problem004 {
     public static void main(String[] args) {
-        LargestPalindromeNumber obj = new LargestPalindromeNumber();
+        Problem004 obj = new Problem004();
         long twoDigitAnswer = obj.LargestPalindrome(2);
         System.out.println(twoDigitAnswer);
         long threeDigitAnswer = obj.LargestPalindrome(3);

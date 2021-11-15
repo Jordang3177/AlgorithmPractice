@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class EvenFibNumbers {
+public class Problem002 {
     public static void main(String[] args) {
         System.out.println(EvenFib(4000000));
     }
