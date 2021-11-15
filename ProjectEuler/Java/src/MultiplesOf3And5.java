@@ -1,6 +1,5 @@
 public class MultiplesOf3And5 {
     public static void main(String[] args) {
-        System.out.println("Hello World");
         System.out.println(MultiplesOf3And5(1000));
     }
 
