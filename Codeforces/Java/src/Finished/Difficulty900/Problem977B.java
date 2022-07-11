@@ -5,7 +5,29 @@ import java.lang.*;
 public class Problem977B {
     public static void main(String[] args) {
         FastReader scan = new FastReader();
-        
+        int size = scan.nextInt();
+        Map<String, Integer> grams = new HashMap<>();
+        String gram = scan.nextLine();
+        String twoGram = new String();
+        int mostOccurrences = 0;
+        for(int i = 0; i  < size - 1; i++) {
+            StringBuilder gramBuilder = new StringBuilder();
+            gramBuilder.append(gram.charAt(i));
+            gramBuilder.append(gram.charAt(i + 1));
+            String currentGram = gramBuilder.toString();
+            if(grams.containsKey(currentGram)) {
+                grams.put(currentGram, grams.get(currentGram) + 1);
+                if(grams.get(currentGram) > mostOccurrences) {
+                    twoGram = currentGram;
+                    mostOccurrences = grams.get(currentGram);
+                }
+            }
+            else {
+                grams.put(currentGram, 1);
+                twoGram = mostOccurrences == 0 ? currentGram : twoGram;
+            }
+        }
+        System.out.println(twoGram);
     }
     static class FastReader {
         BufferedReader br;
