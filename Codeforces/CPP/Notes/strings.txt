@@ -1,0 +1,11 @@
+New String:
+string x;
+string x = "hello"
+
+Getting the character at index i:
+x[i];
+
+Getting the length of the string x:
+x.length();
+x.size();
+Both are the same and have exactly the same performance.
