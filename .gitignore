@@ -1,3 +1,7 @@
 /ProjectEuler/Java/out/
 Codeforces/Java/.idea/uiDesigner.xml
 /Codeforces/Java/out/**
+/.vs/**
+CppProperties.json
+.vscode/**
+Codeforces/CompetitiveProgramming/.vs/**
