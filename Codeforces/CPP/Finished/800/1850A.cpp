@@ -10,19 +10,19 @@ int main()
         int a, b, c;
         cin >> a >> b >> c;
         if(a + b >= 10) {
-            cout << "YES";
+            cout << "YES" << endl;
             continue;
         }
         if(a + c >= 10) {
-            cout << "YES";
+            cout << "YES" << endl;
             continue;
         }
         if(b + c >= 10) {
-            cout << "YES";
+            cout << "YES" << endl;
             continue;
         }
         else {
-            cout << "NO";
+            cout << "NO" << endl;
             continue;
         }
     }
