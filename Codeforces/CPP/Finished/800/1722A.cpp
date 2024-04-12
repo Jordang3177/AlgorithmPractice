@@ -55,6 +55,29 @@ using namespace std;
 #define endl "\n"
 #define forn(i, n) for(int i = 0; i < int(n); i++)
 
+void solve() {
+    int length;
+    cin >> length;
+    string s;
+    cin >> s;
+    if(length != 5) {
+        cout << "NO" << endl;
+    }
+    else {
+        set<char> set;
+        for(int i = 0; i < length; i++) {
+            char currentChar = s.at(i);
+            set.insert(currentChar);
+        }
+        if(set.contains('T') && set.contains('i') && set.contains('m') && set.contains('u') && set.contains('r')) {
+            cout << "YES" << endl;
+        }
+        else {
+            cout << "NO" << endl;
+        }
+    }
+}
+
 int main()
 {
     int t;
@@ -63,8 +86,4 @@ int main()
         solve();
     }
     return 0;
-}
-
-void solve() {
-    
 }
